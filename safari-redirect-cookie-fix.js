@@ -5,7 +5,7 @@ const thirdPartySafariRedirectWorkaround = {
 		const month = d.getMonth();
 		const day = d.getDate();
     const expDate = new Date(year + 10, month, day);
-		const cookieValue = typeof value !== "undefined" ? value : "";
+		let cookieValue = typeof value !== "undefined" ? value : "";
 		cookieValue += ";expires=" + expDate.toGMTString() + ";path=/";
 		document.cookie = name + "=" + cookieValue;
   },
